@@ -5,7 +5,7 @@ All numbers were fetched on 2026-10-30. Nothing comes from model memory.
 ## Ingredient densities
 
 - King Arthur Baking, Ingredient weight chart, https://www.kingarthurbaking.com/learn/ingredient-weight-chart (fetched 2026-10-30, 325 rows). Saved as `data/king-arthur-chart-2026-10-30.json`. Rows with a range, a count unit (1 large egg) or a King Arthur branded blend are left out.
-- USDA FoodData Central, SR Legacy CSV download, https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip (fetched 2026-10-30, keyless). Portion weights from `food_portion.csv`. Each USDA row links to https://fdc.nal.usda.gov/food-details/<fdc_id>/nutrients.
+- USDA FoodData Central, SR Legacy CSV download, https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip (fetched 2026-10-30, keyless). Portion weights from `food_portion.csv`. Each USDA row cites this file as `url` plus its `fdc_id` and `fdc_page` (https://fdc.nal.usda.gov/food-details/<fdc_id>/measures). The FDC page is a browser app and returns HTTP 404 to curl, so the verified download is the primary citation.
 - ingredientcalculator.com cups-to-grams table (35 rows, site source in the ingredientcalculator repo). Used to choose between the two published values: when the site value equals one cited value, that source is used.
 
 `scripts/build_data.py` builds `data/ingredients.json` from these files. Rule for the value used: liquids, fats and USDA-matched staples use USDA; dry baking staples use King Arthur (spoon-and-level), unless the site value equals the USDA value. Every row keeps the other published value under `alternates`.

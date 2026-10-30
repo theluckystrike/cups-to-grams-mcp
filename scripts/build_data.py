@@ -5,6 +5,7 @@ from fractions import Fraction
 
 ka_rows, sr_dir, site_html, out_path = sys.argv[1:5]
 KA_URL = 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart'
+SR_URL = 'https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip'
 FETCHED = '2026-10-30'
 TO_CUP = {'cup': Fraction(1), 'tablespoon': Fraction(1, 16), 'teaspoon': Fraction(1, 48)}
 
@@ -135,7 +136,7 @@ def ka_entry(r):
     return {'source': 'king_arthur', 'url': KA_URL, 'row': r['name'], 'volume': r['volume'], 'grams': r['grams'], 'g_per_cup': r['g_per_cup']}
 
 def usda_entry(u):
-    return {'source': 'usda_fdc', 'url': f"https://fdc.nal.usda.gov/food-details/{u['fdc_id']}/nutrients", 'fdc_id': u['fdc_id'],
+    return {'source': 'usda_fdc', 'url': SR_URL, 'fdc_page': f"https://fdc.nal.usda.gov/food-details/{u['fdc_id']}/measures", 'fdc_id': u['fdc_id'],
             'description': u['description'], 'portion': u['portion'], 'gram_weight': u['gram_weight'], 'g_per_cup': u['g_per_cup']}
 
 out, used = [], set()

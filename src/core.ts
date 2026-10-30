@@ -21,6 +21,7 @@ export interface SourceRef {
   url: string;
   g_per_cup: number;
   fdc_id?: number;
+  fdc_page?: string;
   description?: string;
   portion?: string;
   gram_weight?: number;
