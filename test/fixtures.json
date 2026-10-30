@@ -1,0 +1,358 @@
+[
+ {
+  "name": "US cup is 236.588 mL",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "ml"
+  },
+  "expect": {
+   "result": 236.588,
+   "cup_definition_used.unit": "us_cup"
+  }
+ },
+ {
+  "name": "US tablespoon is 14.787 mL",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "tbsp",
+   "to_unit": "ml"
+  },
+  "expect": {
+   "result": 14.787
+  }
+ },
+ {
+  "name": "US teaspoon is 4.929 mL",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "tsp",
+   "to_unit": "ml"
+  },
+  "expect": {
+   "result": 4.929
+  }
+ },
+ {
+  "name": "US fl oz is 29.574 mL",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "fl oz",
+   "to_unit": "ml"
+  },
+  "expect": {
+   "result": 29.574
+  }
+ },
+ {
+  "name": "16 tbsp is 1 cup",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 16,
+   "from_unit": "tbsp",
+   "to_unit": "cup"
+  },
+  "expect": {
+   "result": 1.0
+  }
+ },
+ {
+  "name": "1 lb is 453.592 g",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "lb",
+   "to_unit": "g"
+  },
+  "expect": {
+   "result": 453.592
+  }
+ },
+ {
+  "name": "1 oz is 28.35 g",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "oz",
+   "to_unit": "g"
+  },
+  "expect": {
+   "result": 28.35
+  }
+ },
+ {
+  "name": "imperial pint is 568.261 mL",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "imperial_pint",
+   "to_unit": "ml"
+  },
+  "expect": {
+   "result": 568.261
+  }
+ },
+ {
+  "name": "metric cup is 250 mL",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "ml",
+   "cup_system": "metric"
+  },
+  "expect": {
+   "result": 250.0,
+   "cup_definition_used.unit": "metric_cup"
+  }
+ },
+ {
+  "name": "1 L is 4.227 US cups",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "l",
+   "to_unit": "us_cup"
+  },
+  "expect": {
+   "result": 4.227
+  }
+ },
+ {
+  "name": "AP flour 1 cup = 120 g (King Arthur)",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "g",
+   "ingredient": "all-purpose flour"
+  },
+  "expect": {
+   "result": 120.0,
+   "ingredient.density_source.source": "king_arthur"
+  }
+ },
+ {
+  "name": "granulated sugar 1 cup = 200 g (USDA 169655)",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "g",
+   "ingredient": "granulated sugar"
+  },
+  "expect": {
+   "result": 200.0,
+   "ingredient.density_source.fdc_id": 169655
+  }
+ },
+ {
+  "name": "butter 1 cup = 227 g (USDA 173430)",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "g",
+   "ingredient": "butter"
+  },
+  "expect": {
+   "result": 227.0,
+   "ingredient.density_source.fdc_id": 173430
+  }
+ },
+ {
+  "name": "honey 1 cup = 339 g (USDA 169640)",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "g",
+   "ingredient": "honey"
+  },
+  "expect": {
+   "result": 339.0,
+   "ingredient.density_source.fdc_id": 169640
+  }
+ },
+ {
+  "name": "water 1 cup = 237 g (USDA 174158)",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "g",
+   "ingredient": "water"
+  },
+  "expect": {
+   "result": 237.0
+  }
+ },
+ {
+  "name": "honey 1 tbsp = 339/16 g",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "tbsp",
+   "to_unit": "g",
+   "ingredient": "honey"
+  },
+  "expect": {
+   "result": 21.188
+  }
+ },
+ {
+  "name": "brown sugar 1/2 cup = 110 g",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 0.5,
+   "from_unit": "cup",
+   "to_unit": "g",
+   "ingredient": "brown sugar"
+  },
+  "expect": {
+   "result": 110.0
+  }
+ },
+ {
+  "name": "100 g sugar = 1/2 cup",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 100,
+   "from_unit": "g",
+   "to_unit": "cup",
+   "ingredient": "sugar"
+  },
+  "expect": {
+   "result": 0.5
+  }
+ },
+ {
+  "name": "1 stick butter = 1/4 lb",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "stick",
+   "to_unit": "g",
+   "ingredient": "butter"
+  },
+  "expect": {
+   "result": 113.398
+  }
+ },
+ {
+  "name": "AP flour 1 metric cup = 120 x 250 / 236.588",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "g",
+   "ingredient": "all-purpose flour",
+   "cup_system": "metric"
+  },
+  "expect": {
+   "result": 126.803
+  }
+ },
+ {
+  "name": "milk 1 cup to oz weight = 244 / 28.3495",
+  "tool": "convert_ingredient",
+  "input": {
+   "amount": 1,
+   "from_unit": "cup",
+   "to_unit": "oz",
+   "ingredient": "milk"
+  },
+  "expect": {
+   "result": 8.607
+  }
+ },
+ {
+  "name": "search flour finds AP flour first",
+  "tool": "search_ingredients",
+  "input": {
+   "query": "icing sugar"
+  },
+  "expect": {
+   "results.0.id": "powdered-sugar",
+   "results.0.g_per_us_cup": 120.0
+  }
+ },
+ {
+  "name": "scale 1 1/2 cups AP flour x2 = 3 cups = 360 g",
+  "tool": "scale_recipe",
+  "input": {
+   "lines": [
+    "1 1/2 cups all-purpose flour",
+    "½ cup sugar"
+   ],
+   "factor": 2,
+   "to_metric_weights": true
+  },
+  "expect": {
+   "lines.0.scaled_quantity": 3.0,
+   "lines.0.metric.grams": 360.0,
+   "lines.1.scaled": "1 cup sugar",
+   "lines.1.metric.grams": 200.0
+  }
+ },
+ {
+  "name": "scale by servings 4 to 6",
+  "tool": "scale_recipe",
+  "input": {
+   "lines": [
+    "2 tbsp honey"
+   ],
+   "original_servings": 4,
+   "target_servings": 6,
+   "to_metric_weights": true
+  },
+  "expect": {
+   "factor": 1.5,
+   "lines.0.scaled_quantity": 3.0,
+   "lines.0.metric.grams": 63.6
+  }
+ },
+ {
+  "name": "350 F = 176.7 C, gas 4",
+  "tool": "convert_oven_temperature",
+  "input": {
+   "value": 350,
+   "from_scale": "F"
+  },
+  "expect": {
+   "celsius": 176.7,
+   "gas_mark.mark": 4,
+   "gas_mark.exact": true
+  }
+ },
+ {
+  "name": "gas 6 = 400 F / 200 C",
+  "tool": "convert_oven_temperature",
+  "input": {
+   "value": 6,
+   "from_scale": "gas"
+  },
+  "expect": {
+   "fahrenheit": 400.0,
+   "celsius": 200.0
+  }
+ },
+ {
+  "name": "180 C conventional = 160 C fan",
+  "tool": "convert_oven_temperature",
+  "input": {
+   "value": 180,
+   "from_scale": "C",
+   "fan": "conventional_to_fan"
+  },
+  "expect": {
+   "fan_adjusted.c": 160.0,
+   "fan_adjusted.f": 320.0,
+   "fahrenheit": 356.0
+  }
+ }
+]

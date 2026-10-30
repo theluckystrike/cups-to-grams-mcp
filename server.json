@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.theluckystrike/cups-to-grams-mcp",
+  "title": "Cups to Grams",
+  "description": "Cups to grams for 271 ingredients with USDA and King Arthur densities, recipe scaling, oven temps.",
+  "version": "1.0.0",
+  "websiteUrl": "https://ingredientcalculator.com/cups-to-grams",
+  "repository": { "url": "https://github.com/theluckystrike/cups-to-grams-mcp", "source": "github" },
+  "remotes": [ { "type": "streamable-http", "url": "https://cups-to-grams-mcp.lipmichal.workers.dev/mcp" } ]
+}

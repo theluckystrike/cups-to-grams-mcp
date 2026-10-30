@@ -1,0 +1,32 @@
+{
+  "name": "cups-to-grams-mcp",
+  "version": "1.0.0",
+  "description": "Cups to grams MCP server: ingredient-aware kitchen conversion with measured USDA and King Arthur densities, recipe scaling and oven temperatures.",
+  "type": "module",
+  "license": "MIT",
+  "author": "theluckystrike",
+  "mcpName": "io.github.theluckystrike/cups-to-grams-mcp",
+  "bin": {
+    "cups-to-grams-mcp": "dist/stdio.js"
+  },
+  "main": "dist/core.js",
+  "files": ["dist", "README.md", "LICENSE", "DATA_SOURCES.md"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/stdio.js",
+    "test": "node --test",
+    "data": "python3 -I scripts/gen_data_ts.py data/ingredients.json src/data.ts",
+    "deploy": "wrangler deploy"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/theluckystrike/cups-to-grams-mcp.git" },
+  "homepage": "https://ingredientcalculator.com/cups-to-grams",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "cups-to-grams", "baking", "cooking", "recipe-converter", "kitchen-conversion", "ingredient-density", "usda"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}
