@@ -43,7 +43,7 @@ claude mcp add --transport http cups-to-grams https://cups-to-grams-mcp.lipmicha
 Or run it locally over stdio:
 
 ```
-claude mcp add cups-to-grams -- npx -y github:theluckystrike/cups-to-grams-mcp
+claude mcp add cups-to-grams -- npx -y cups-to-grams-mcp
 ```
 
 ### Claude Desktop
@@ -55,7 +55,7 @@ Add to `claude_desktop_config.json`:
   "mcpServers": {
     "cups-to-grams": {
       "command": "npx",
-      "args": ["-y", "github:theluckystrike/cups-to-grams-mcp"]
+      "args": ["-y", "cups-to-grams-mcp"]
     }
   }
 }
